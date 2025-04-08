@@ -60,7 +60,7 @@ function logout() {
 function Button_RemoverStudent() {
     inputField.style.display = inputField.style.display === "none" ? "block" : "none";
     remover.style.display = remover.style.display === "none" ? "block" : "none";
-    container_stu.style.display = container_stu.style.display = "none";
+    container_stu.style.display = "none";
 }
 
 async function remove_student() {
