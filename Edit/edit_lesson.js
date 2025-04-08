@@ -1,4 +1,4 @@
-import { db } from "/firebase.js"; // تأكد إن المسار صحيح
+import { db } from "../firebase.js"; // تأكد إن المسار صحيح
 import { ref, get,set , remove } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
 
 // عناصر التحكم
