@@ -1,5 +1,5 @@
 import { ref, get, set } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js"; // استيراد الدوال اللازمة
-import { db } from "/firebase.js";  // تأكد من المسار الصحيح لملف firebase-init.js
+import { db } from "../firebase.js";  // تأكد من المسار الصحيح لملف firebase-init.js
 document.getElementById("loginForm").addEventListener("submit", function (e) {
     e.preventDefault();
 
@@ -27,7 +27,7 @@ document.getElementById("loginForm").addEventListener("submit", function (e) {
                 localStorage.setItem("role", account.role);
 
                 // إعادة توجيه المستخدم
-                window.location.href = "/lesson/lessons.html"; 
+                window.location.href = "../lesson/lessons.html"; 
             } else {
                 alert("❌ Wrong password. Try again.");
             }
