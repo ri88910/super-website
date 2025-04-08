@@ -57,12 +57,9 @@ function logout() {
     window.location.href = "../login/index.html";
 }
 
-function Button_RemoverStudent(){
-    document.getElementById("showInputBtn").addEventListener("click", function() {
-        inputField.style.display = inputField.style.display === "none" ? "block" : "none";
-        remover.style.display = remover.style.display === "none" ? "block" : "none";
-        container.style.display = container.style.display == "block" ? "none" : "none";
-    });
+function Button_RemoverStudent() {
+    inputField.style.display = inputField.style.display === "none" ? "block" : "none";
+    remover.style.display = remover.style.display === "none" ? "block" : "none";
 }
 
 async function remove_student() {
