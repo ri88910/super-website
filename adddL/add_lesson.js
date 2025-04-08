@@ -1,5 +1,5 @@
 import { ref, set, update, get } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
-import { db } from "/firebase.js"; 
+import { db } from "../firebase.js"; 
 
 
 const name_input = document.getElementById('name_input');
