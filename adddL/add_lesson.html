@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="add_lesson.css" sizes="20x30">
+    <link rel="icon" href="/pic5.png">
+</head>
+<body>
+    <nav>
+        <div id="nav1">
+            <h1 id="h2">Abdo school</h1>
+        </div>
+        <div id="nav2">
+            <a href="/about/index3.html" id="a">About him</a>
+            <a href="/LessonControls/index.html" id="a">Lesson controls</a>
+        </div>
+    </nav>
+
+    <h3 id="lesson">Add a lesson: <i class="fa-solid fa-book fa-fade"></i></h3>
+    <main>
+        <div id="container">
+            <h1 id="title" style="display: none;">Name</h1>
+            <div id="add">
+                <i class="fa-solid fa-plus" id="first_add"></i>
+                <p id="name">insert a name</p>
+                <input type="text" id="name_input" style="display: none;" placeholder="Write the name">
+                <button id="button_name" style="display: none;">add +</button>
+            </div>
+
+            <div id="add">
+                <i class="fa-solid fa-plus" id="add_vid"></i>
+                <p id="name">insert a video</p>
+                <!-- <input type="file" id="video_input" style="display: none;"/> -->
+                <div id="vid_stuf">
+                    <input type="text" id="videoLinkInput" placeholder="Please put the link of your video" style="display: none;">
+                    <button id="button_video" style="display: none;">Add Video</button>
+                </div>
+                
+            </div>
+        </div>
+    </main>
+    
+
+    <script type="module" src="add_lesson.js"></script>
+    <script src="https://kit.fontawesome.com/b23a977e81.js" crossorigin="anonymous"></script>
+
+    <script type="module">
+        import { db } from "/firebase.js"; // use correct relative path
+        import { ref, get, set, remove, child } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+        
+        // Example: read from accounts
+        const snapshot = await get(child(ref(db), "lessons"));
+        if (snapshot.exists()) {
+            console.log(snapshot.val());
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+function login() {
+    let role = (password === abdo123)  Teacher  Student;
+
+    localStorage.setItem(role, role);
+
+    showDashboard();
+}
+
+function logout() {
+    localStorage.removeItem(email);
+    localStorage.removeItem(role);
+    localStorage.removeItem(students);
+    location.reload();
+}
+
+function showDashboard() {
+    let role = localStorage.getItem(role);
+    let email = localStorage.getItem(password);
+
+    if (email) {
+        document.getElementById(dashboard).style.display = block;
+        document.getElementById(userRole).innerText = role;
+        document.getElementById(studentControls).style.display = (role === Teacher)  block  none;
+
+        loadStudents();
+    }
+}
+
+function addStudent() {
+    let name = document.getElementById(studentName).value.trim();
+    if (name === ) {
+        alert(Enter student name);
+        return;
+    }
+
+    let students = JSON.parse(localStorage.getItem(students))  [];
+    students.push(name);
+    localStorage.setItem(students, JSON.stringify(students));
+    document.getElementById(studentName).value = ;
+    loadStudents();
+}
+
+function removeStudents() {
+    localStorage.removeItem(students);
+    loadStudents();
+}
+
+function loadStudents() {
+    let list = document.getElementById(studentsList);
+    list.innerHTML = ;
+
+    let students = JSON.parse(localStorage.getItem(students))  [];
+
+    students.forEach((student, index) = {
+        let li = document.createElement(li);
+        li.textContent = `${index + 1}. ${student}`;
+        list.appendChild(li);
+    });
+}
+
+ Auto-load dashboard if already logged in
+window.onload = showDashboard;

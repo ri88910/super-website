@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" sizes="20x30">
+    <link rel="icon" href="/pic5.png">
+</head>
+<body>
+    <nav>
+        <div id="nav1">
+            <h1 id="h2">Abdo school</h1>
+        </div>
+        <div id="nav2">
+            <a href="/lesson/lessons.html" id="a">Controls</a>
+            <a href="/contact/index2.html" id="a">Contact him</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="welcome">Welcome to the Lesson controls   <i class="fa-solid fa-person-chalkboard"></i></h2>
+
+        <div id="lessonControls">
+                <button onclick="Add_lesson()" id="add">Add a lesson</button>
+                <button onclick="Edit_lesson()" id="edit">Edit lessons</button>
+        </div>
+        
+    </div>
+
+
+    <script type="module" src="index.js"></script>
+    <script src="https://kit.fontawesome.com/b23a977e81.js" crossorigin="anonymous"></script>
+    
+    <!-- Add this in your HTML <head> before any script -->
+    <script type="module">
+        import { db } from "/firebase.js"; // use correct relative path
+        import { ref, get, set, remove, child } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+        
+        // Example: read from accounts
+        const snapshot = await get(child(ref(db), "lessons"));
+        if (snapshot.exists()) {
+            console.log(snapshot.val());
+        }
+    </script>
+</body>
+</html>

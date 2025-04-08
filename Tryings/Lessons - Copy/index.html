@@ -1,0 +1,33 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact me</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2024.10.1/core.css">
+    <script type="module" src="https://pyscript.net/releases/2024.10.1/core.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Check Admin</h1>
+    
+    <button onclick="checkAdmin()">Check Admin</button>
+    <div id="result"></div>
+
+    <script>
+        async function checkAdmin() {
+            const response = await fetch('http://localhost:5000/check_admin');
+            const data = await response.json();
+
+            const resultDiv = document.getElementById('result');
+            if (data.admin) {
+                resultDiv.textContent = `Admin '${data.admin}' has full access!`;
+            } else {
+                resultDiv.textContent = 'No admin found!';
+            }
+        }
+    </script>
+
+</body>
+</html>

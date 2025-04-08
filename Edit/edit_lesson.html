@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="edit_lesson.css" sizes="20x30">
+    <link rel="icon" href="/pic5.png">
+</head>
+<body>
+    <nav>
+        <div id="nav1">
+            <h1 id="h2">Abdo school</h1>
+        </div>
+        <div id="nav2">
+            <a href="/about/index3.html" id="a">About him</a>
+            <a href="/LessonControls/index.html" id="a">Lesson controls</a>
+        </div>
+    </nav>
+
+    <h2 id="lesson">Edit lessons: <i class="fa-solid fa-book fa-fade"></i></h2>
+    <main>
+        <div id="container">
+
+            <h1 id="title">All lessons</h1>
+
+            <div id="icons">
+                <div id="edits">
+                    <i class="fa-solid fa-trash" id="del_sel"></i>
+                    <i class="fa-solid fa-pen" id="edit_sel"></i>
+                </div>
+
+                <div id="select">
+                    <p>select all</p>
+                    <i class="fa-solid fa-border-all"></i>
+                </div>
+            </div>
+
+            <div id="add">
+                <div id="lessonDiv">
+
+                </div>
+            </div>
+    
+
+        </div>
+    </main>
+    
+
+    <script type="module" src="edit_lesson.js"></script>
+    <script src="https://kit.fontawesome.com/b23a977e81.js" crossorigin="anonymous"></script>
+    
+    
+    <script type="module">
+        import { db } from "/firebase.js"; // use correct relative path
+        import { ref, get, set, remove, child } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+        
+        // Example: read from accounts
+        const snapshot = await get(child(ref(db), "lessons"));
+        if (snapshot.exists()) {
+            console.log(snapshot.val());
+        }
+    </script>
+
+</body>
+</html>

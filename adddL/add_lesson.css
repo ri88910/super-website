@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: #fef9e7;
+    color: rgb(74, 45, 3);
+}
+
+nav{
+    background-color: #f4e07c;
+    display: flex;
+    justify-content: space-between;
+    font-size: 23px;
+    align-items: center;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 15px;
+    margin-bottom: 50px;
+    width: 98%;
+}
+
+
+#a{
+    border-right: 1px solid rgb(94, 88, 6);
+    text-decoration: none;
+    color: rgb(6, 94, 62);
+    font-size: 20px;
+}
+
+
+#a:hover{
+    background-color:rgb(190, 178, 45);
+    padding-top: 31px;
+	padding-bottom: 20px;
+}
+
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto; /* يحطه في نص الصفحة */
+}
+
+#container {
+    background-color: #f5eec2;
+    width: 900px;
+    height: auto;
+    padding: 20px;
+}
+
+#add{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    padding-top: 30px;
+}
+
+#title{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+#lesson {
+    text-align: center;
+    color: #817406;
+    font-size: 45px;
+}
+
+.fa-plus{
+    cursor: pointer;
+    padding-top: 20px;
+    background-color: #F2E2B1;
+    padding: 20px;
+    border: solid #BDB395 2px;
+    border-radius: 35px;
+}
+
+#name{
+    font-size: 20px;
+}
+
+#name_input{
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    border: solid #BDB395 1px;
+    border-radius: 5px;
+    color: #817406;
+}
+
+button{
+    background-color: #5d4037;
+    color: white;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+
+#vid_stuf {
+    display: flex;
+    flex-direction: row; /* تغيير الاتجاه للعمودي */
+    gap: 15px; /* إضافة مسافة بين الـ input والـ button */
+    align-items: flex-start; /* تأكد من محاذاة العناصر من اليسار */
+}
+
+
+#videoLinkInput {
+    margin-left: 0; /* إزالة المسافة على اليسار */
+    padding: 10px;
+    width: 190px; 
+    border-radius: 5px;
+    border: solid #BDB395 1px;
+}
