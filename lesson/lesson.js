@@ -108,7 +108,7 @@ function Add_lesson(){
     // remover.style.display = remover.style.display = "none";
     // inputField.style.display = inputField.style.display = "none" ;
     // container.style.display = container.style.display = "none" ;
-    window.location.href = "/LessonControls/index.html"; 
+    window.location.href = "../LessonControls/index.html"; 
 }
 
 
