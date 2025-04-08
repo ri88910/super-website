@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lessons</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="lesson.css" sizes="20x30">
+    <link rel="icon" href="/pic5.png">
+</head>
+<body>
+    <nav>
+        <div id="nav1">
+            <h1 id="h2">Abdo school</h1>
+        </div>
+        <div id="nav2">
+            <a href="/about/index3.html" id="a">About him</a>
+            <a href="/contact/index2.html" id="a">Contact him</a>
+        </div>
+    </nav>
+
+    <div id="up">
+        <h1 class="welcome">Welcome to the Lesson Page   <i class="fa-solid fa-face-laugh-beam fa-bounce"></i></h2>
+        <button id="out">Logout</button>
+    </div>
+        
+    <main>
+        <div class="container" id="container" style="display: none;">
+            <h1 class="control">Teacher Controls</h3>
+            <div id="teacherControls">
+                    <button id="AddLesson">Lessons</button>
+                    <button id="showInputBtn">Remove student</button>
+                    <button id="showlist">Show students</button>
+            </div>
+
+            <div class="sides">
+                <div>
+                    <input type="text" id="hiddenInput" placeholder="Enter the students' email" style="display: none;">
+                    <button id="RemStu" style="display: none;">Delete</button>
+                </div>
+
+                <div id="list_students">
+                    <div class="list" id="container_students" style="display: none;"></div>
+                </div>
+            </div>
+            
+
+        </div>
+
+        <div id="student">
+            <div id="show_lesson">
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <div id="add_lesson" style="display: none;">
+        <h3 id="lesson">Add a lesson: <i class="fa-solid fa-book fa-fade"></i></h3>
+        <input type="text" id="add">
+    </div>
+
+    <script type="module" src="lesson.js"></script>
+    <script src="https://kit.fontawesome.com/b23a977e81.js" crossorigin="anonymous"></script>
+    
+    <!-- Add this in your HTML <head> before any script -->
+    <script type="module">
+        import { db } from "/firebase.js"; // use correct relative path
+        import { ref, get, set, remove, child } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
+        
+        // Example: read from accounts
+        const snapshot = await get(child(ref(db), "lessons"));
+        if (snapshot.exists()) {
+            console.log(snapshot.val());
+        }
+    </script>
+              
+    
+</body>
+</html>
