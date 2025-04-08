@@ -1,5 +1,5 @@
 import { getDatabase, ref, get, set, child, remove } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
-import { db } from "/firebase.js";
+import { db } from "../firebase.js";
 
 
 async function getAccounts() {
@@ -54,7 +54,7 @@ function logout() {
     localStorage.removeItem("email");
     localStorage.removeItem("password");
     localStorage.removeItem("role");
-    window.location.href = "/login/index.html";
+    window.location.href = "../login/index.html";
 }
 
 function Button_RemoverStudent(){
