@@ -1,5 +1,5 @@
 import { getDatabase, ref, get, set, child, remove } from "https://www.gstatic.com/firebasejs/10.11.0/firebase-database.js";
-import { db } from "/firebase.js";
+import { db } from "../firebase.js";
 
 
 async function getAccounts() {
@@ -26,7 +26,7 @@ window.onload = async function() {
     console.log("📩 email from localStorage:", email);
 
     // if (!email) {
-    //     window.location.href = "/login/index.html";
+    //     window.location.href = "../login/index.html";
     //     return;
     // }
 
@@ -39,12 +39,12 @@ window.onload = async function() {
     console.log("userData:", userData);
 
     // if (!userData) {
-    //     // window.location.href = "/login/index.html";
+    //     // window.location.href = "../login/index.html";
     //     return;
     // }
 
     if (!userData) {
-        // window.location.href = "/login/index.html";
+        // window.location.href = "../login/index.html";
         return;
     }
     const role = userData.role;
@@ -64,7 +64,7 @@ function logout() {
     localStorage.removeItem("email");
     localStorage.removeItem("password");
     localStorage.removeItem("role");
-    window.location.href = "/login/index.html";
+    window.location.href = "../login/index.html";
 }
 
 function Button_RemoverStudent(){
@@ -118,7 +118,7 @@ function Add_lesson(){
     // remover.style.display = remover.style.display = "none";
     // inputField.style.display = inputField.style.display = "none" ;
     // container.style.display = container.style.display = "none" ;
-    window.location.href = "/LessonControls/index.html"; 
+    window.location.href = "../LessonControls/index.html"; 
 }
 
 
