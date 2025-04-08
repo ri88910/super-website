@@ -22,9 +22,9 @@ document.getElementById("add").addEventListener("click", Add_lesson);
 document.getElementById("edit").addEventListener("click", Edit_lesson);
 
 function Add_lesson(){
-  window.location.href = "/adddL/add_lesson.html"; 
+  window.location.href = "../adddL/add_lesson.html"; 
 }
 
 function Edit_lesson(){
-  window.location.href = '/Edit/edit_lesson.html'
+  window.location.href = '../Edit/edit_lesson.html'
 }
